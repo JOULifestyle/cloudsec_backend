@@ -14,7 +14,8 @@ app = FastAPI()
 # CORS config
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # Adjust for production
+    allow_origins=["https://cloudsec-dashboard.vercel.app/dashboard"
+    "http://localhost:5173"],  # Adjust for production
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
