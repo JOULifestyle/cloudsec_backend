@@ -3,6 +3,12 @@ import json
 import psycopg2
 from dotenv import load_dotenv
 from fastapi.encoders import jsonable_encoder
+from supabase import create_client
+
+
+SUPABASE_URL = os.getenv("SUPABASE_URL")
+SUPABASE_KEY = os.getenv("SUPABASE_KEY")
+supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 # Load environment variables
 load_dotenv()
